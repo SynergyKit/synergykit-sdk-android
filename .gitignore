@@ -1,0 +1,48 @@
+SynergyKit SDK Android/.idea/
+out/
+SynergyKit SDK Android/synergykit.iml
+SynergyKit SDK Android/synergykit-android.iml
+
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Eclipse project files
+*.classpath
+*.project
+
+*.properties
+
+# Android studio
+SynergyKit SDK Android/.gradle
+SynergyKit SDK Android//local.properties
+SynergyKit SDK Android//.idea/workspace.xml
+SynergyKit SDK Android//.idea/libraries
+SynergyKit SDK Android/.DS_Store
+SynergyKit SDK Android//build
+
+
+.idea
+Project.iml
+
+.DS_Store
+
+# idea folder from android studio
+.idea/
+
+#Documentation
+README_original.md
+

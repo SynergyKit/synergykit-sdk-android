@@ -1,0 +1,128 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+
+        android:paddingLeft="@dimen/activity_horizontal_margin">
+
+        <Button
+            android:id="@+id/buttonSignUp"
+            style="@style/menuButton"
+            android:layout_centerHorizontal="true"
+            android:text="Sign Up" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divaderHeight"
+            android:background="@color/gray_brightness77" />
+
+        <Button
+            android:id="@+id/buttonSignIn"
+            style="@style/menuButton"
+            android:layout_centerHorizontal="true"
+            android:text="Sign In" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divaderHeight"
+            android:background="@color/gray_brightness77" />
+
+        <Button
+            android:id="@+id/buttonData"
+            style="@style/menuButton"
+            android:layout_centerHorizontal="true"
+            android:text="Data" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divaderHeight"
+            android:background="@color/gray_brightness77" />
+
+        <Button
+            android:id="@+id/buttonQueries"
+            style="@style/menuButton"
+            android:layout_centerHorizontal="true"
+            android:text="Queries" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divaderHeight"
+            android:background="@color/gray_brightness77" />
+
+
+        <Button
+            android:id="@+id/buttonFiles"
+            style="@style/menuButton"
+            android:layout_centerHorizontal="true"
+            android:text="Files" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divaderHeight"
+            android:background="@color/gray_brightness77" />
+
+        <Button
+            android:id="@+id/buttonCloudCode"
+            style="@style/menuButton"
+            android:layout_centerHorizontal="true"
+            android:text="Cloud Code" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divaderHeight"
+            android:background="@color/gray_brightness77" />
+
+        <Button
+            android:id="@+id/buttonNotifications"
+            style="@style/menuButton"
+            android:layout_centerHorizontal="true"
+            android:text="Notifications" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divaderHeight"
+            android:background="@color/gray_brightness77" />
+
+        <Button
+            android:id="@+id/buttonEmails"
+            style="@style/menuButton"
+            android:layout_centerHorizontal="true"
+            android:text="E-mails" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divaderHeight"
+            android:background="@color/gray_brightness77" />
+
+        <Button
+            android:id="@+id/buttonBatch"
+            style="@style/menuButton"
+            android:layout_centerHorizontal="true"
+            android:text="Batch" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divaderHeight"
+            android:background="@color/gray_brightness77" />
+
+
+        <Button
+            android:id="@+id/buttonSocket"
+            style="@style/menuButton"
+            android:layout_centerHorizontal="true"
+            android:text="Chat" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divaderHeight"
+            android:background="@color/gray_brightness77" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,124 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <dimen name="logoMaxHeight">200px</dimen>
+
+    <!-- MARGIN, PADDING -->
+    <dimen name="appPadding">8dp</dimen>
+    <dimen name="abPaddingLeft">0dp</dimen>
+    <dimen name="abPaddingRight">0dp</dimen>
+    <dimen name="itemPadding">8dp</dimen>
+    <dimen name="defaultMargin">15dp</dimen>
+
+    <!-- DEFAULT FONT -->
+    <dimen name="defaultFontSize">16sp</dimen>
+
+    <!-- SEPARATORS -->
+    <dimen name="divaderPadding">2dp</dimen>
+    <dimen name="divaderHeight">1dp</dimen>
+    <!-- textSeparator -->
+    <dimen name="textSeparatorMarginTop">12dp</dimen>
+    <dimen name="textSeparatorHeight">0.9dp</dimen>
+
+    <!-- BUTTONS -->
+    <dimen name="formButtonFontSize">12sp</dimen>
+
+    <!-- KctButton -->
+    <dimen name="buttonTextSize">16sp</dimen>
+    <dimen name="buttonMinHeight">50dp</dimen>
+    <dimen name="buttonMargin">4dp</dimen>
+    <dimen name="buttonPadding">8dp</dimen>
+
+    <!-- Spinner -->
+    <dimen name="spinnerHorizontalPadding">8dp</dimen>
+    <dimen name="spinnerVerticalPadding">4dp</dimen>
+    <dimen name="spinnerDividerHeight">2dp</dimen>
+    <dimen name="spinnerCornerRadius">1dp</dimen>
+
+    <!-- TabWidget -->
+    <dimen name="tabTextSize">13sp</dimen>
+
+    <!-- TEXTVIEW -->
+    <!-- textTitle -->
+    <dimen name="textTitleTextSize">12sp</dimen>
+    <dimen name="textTitleMarginTop">12dp</dimen>
+    <dimen name="alertTitle">16sp</dimen>
+    <dimen name="alertMessage">15sp</dimen>
+
+    <!-- textDetailDescription -->
+    <dimen name="textDetailDescriptionTextSize">17sp</dimen>
+
+    <!-- textPlaceholder -->
+    <dimen name="textPlaceholderTextSize">20sp</dimen>
+    <dimen name="textPlaceholderMarginBottom">60dp</dimen>
+
+    <!-- CHECKBOX -->
+    <dimen name="checkBoxTextSize">19sp</dimen>
+
+    <!-- EDITTEXT -->
+    <!-- editText -->
+    <dimen name="editTextHorizontalPadding">8dp</dimen>
+    <dimen name="editTextVerticalPadding">4dp</dimen>
+    <dimen name="editTextStrokeWidth">1dp</dimen>
+    <dimen name="editTextCornerRadius">1dp</dimen>
+    <dimen name="editTextMinHeight">40dp</dimen>
+    <dimen name="editTextLocationMinWidth">200dp</dimen>
+    <dimen name="editTextInventoryItemMinWidth">200dp</dimen>
+    <dimen name="editTextTextSize">15sp</dimen>
+    <dimen name="editTextSearchMinWidth">200dp</dimen>
+
+    <!-- TABHOST -->
+    <dimen name="tab_host_default_height">48dp</dimen>
+
+    <!-- LISTVIEW -->
+    <!-- listView -->
+    <dimen name="listViewDividerHeight">1dp</dimen>
+    <dimen name="listViewTextItemsMargin">5dp</dimen>
+    <dimen name="listViewFooterHeight">48dp</dimen>
+    <dimen name="listViewFooterTextSize">12sp</dimen>
+
+    <!-- textListView -->
+    <dimen name="textListViewTextSize">14sp</dimen>
+    <dimen name="textListViewPaddingBottom">2dp</dimen>
+
+    <!-- textListViewDescription -->
+    <dimen name="textListViewDescriptionTextSize">13sp</dimen>
+    <dimen name="textListViewDescriptionPaddingBottom">0dp</dimen>
+
+    <!-- PLACEHOLDER -->
+    <dimen name="placeholderSideMargin">10dp</dimen>
+
+    <!-- IMAGES -->
+    <!-- inventoryImage -->
+    <dimen name="inventoryImageMarginRight">8dp</dimen>
+
+    <!-- placeholder -->
+    <dimen name="placeholderImageMarginBottom">14dp</dimen>
+
+    <!-- ALERTDIALOG -->
+    <dimen name="alertDialogPadding">10dp</dimen>
+
+    <!-- WRAPPED EDITTETXT/SPINNER/DATEPICKER -->
+    <dimen name="wrappedViewSidePadding">5dp</dimen>
+    <dimen name="wrappedTitleMargin">5dp</dimen>
+    <dimen name="wrappedViewBottomPadding">5dp</dimen>
+
+    <!-- ITEMS  -->
+    <dimen name="itemsHeaderHeight">40dp</dimen>
+    <dimen name="itemsHeight">60dp</dimen>
+    <dimen name="itemContactPersonWidth">1000dp</dimen>
+    <dimen name="itemOrderItemWidth">1000dp</dimen>
+    <dimen name="itemServiceOrderItemWidth">1700dp</dimen>
+
+    <!-- DRAWER -->
+    <dimen name="drawerWidth">300dp</dimen>
+
+    <!-- TABLE -->
+    <dimen name="tableHeader">40dp</dimen>
+
+    <!-- POPUP -->
+    <dimen name="popupPadding">20dp</dimen>
+</resources>

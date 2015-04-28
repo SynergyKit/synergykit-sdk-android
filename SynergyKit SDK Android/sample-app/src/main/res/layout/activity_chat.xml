@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/white">
+
+    <ListView
+        android:id="@+id/messageListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/messageSendWrapper"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:background="@color/transparent"
+        android:listSelector="@color/transparent"
+        android:clickable="false"
+        android:dividerHeight="0dp"
+        android:orientation="vertical"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+
+    <TextView
+        android:id="@+id/typingTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/green"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/layoutGray"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/messageSendWrapper"
+>
+
+    <EditText
+        android:id="@+id/messageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_toLeftOf="@+id/buttonSend"
+        android:inputType="textCapSentences"
+        android:paddingLeft="@dimen/defaultMargin"
+        android:paddingRight="@dimen/defaultMargin"
+        android:singleLine="true"
+
+        android:hint="Write a message..."/>
+
+
+    <Button
+        android:id="@+id/buttonSend"
+        style="@style/chatSendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_alignParentRight="true"
+        android:enabled="false"
+        android:text="Send" />
+
+    </RelativeLayout>
+</RelativeLayout>
+

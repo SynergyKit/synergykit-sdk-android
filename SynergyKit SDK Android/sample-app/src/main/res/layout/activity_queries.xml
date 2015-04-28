@@ -1,0 +1,146 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/wrapper"
+        style="@style/layoutGray"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/textViewUsers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Users" />
+
+        <LinearLayout
+            android:id="@+id/usersButtonWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewUsers"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/defaultMargin">
+
+            <Button
+                android:id="@+id/buttonFindLastUser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="@dimen/defaultMargin"
+                android:layout_weight="1"
+                android:text="Find last user" />
+
+            <Button
+                android:id="@+id/button5Emails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/defaultMargin"
+                android:layout_weight="1"
+                android:text="5 email" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textViewData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Data"
+            android:layout_below="@id/usersButtonWrapper"
+            android:layout_marginTop="@dimen/defaultMargin"/>
+
+        <LinearLayout
+            android:id="@+id/dataButtonWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewData"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/defaultMargin">
+
+            <Button
+                android:id="@+id/buttonFindLastRecord"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="@dimen/defaultMargin"
+                android:layout_weight="1"
+                android:text="Find last record" />
+
+            <Button
+                android:id="@+id/button5Texts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/defaultMargin"
+                android:layout_weight="1"
+                android:text="5 texts" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textViewFiles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Files"
+            android:layout_below="@id/dataButtonWrapper"
+            android:layout_marginTop="@dimen/defaultMargin"/>
+
+        <LinearLayout
+            android:id="@+id/filesButtonWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewFiles"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/defaultMargin">
+
+            <Button
+                android:id="@+id/buttonFindLastFile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="@dimen/defaultMargin"
+                android:layout_weight="1"
+                android:text="Find last file" />
+
+            <Button
+                android:id="@+id/button5Files"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/defaultMargin"
+                android:layout_weight="1"
+                android:text="5 largest files" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        style="@style/editText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonGetData"
+        android:layout_below="@id/wrapper"
+        android:layout_margin="@dimen/defaultMargin"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+
+            />
+    </ScrollView>
+</RelativeLayout>

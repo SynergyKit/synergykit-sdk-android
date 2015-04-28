@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".BatchActivity">
+
+    <RelativeLayout
+        android:id="@+id/wrapper"
+        style="@style/layoutGray"
+        android:layout_alignParentTop="true">
+
+        <EditText
+            android:id="@+id/inputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/defaultMargin"
+            android:layout_toLeftOf="@+id/buttonBatch"
+            android:gravity="center"
+            android:hint="Insert text"
+            />
+
+        <Button
+            android:id="@+id/buttonBatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="Batch" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        style="@style/editText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonGetData"
+        android:layout_below="@id/wrapper"
+        android:layout_margin="@dimen/defaultMargin"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+
+            />
+    </ScrollView>
+</RelativeLayout>
