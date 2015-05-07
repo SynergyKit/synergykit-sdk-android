@@ -107,7 +107,7 @@ public class DemoUser extends SynergykitUser {
 ```
 
 ## SynergyKit Initialization
-Before you can start with SynergyKit SDK you need to set tenant and key. Is recommended to set it up in `onCreate` method  the your application class (class extended Application).
+Before you can start developing with SynergyKit SDK you need to set tenant and key. Is recommended to set it up in `onCreate` method of your application class (class extended Application).
 
 You can find it in **Settings > Application keys > Tenant** and **Settings > Application keys > Value** in SynergyKit web application.
 
@@ -118,7 +118,7 @@ Synergykit.init(APPLICATION_TENANT, APPLICATION_KEY);
 ## Responses handling
 There are many options that you can receive at the end of API communication. SDK provides many listeners to hadle responses.
 
-Every request has response listener  which provides `doneCallback` and  `errorCallback`. `doneCallback` is called when everything was done without error. `errorCallback` otherwise.
+Every request has response listener which provides `doneCallback` and `errorCallback`. `doneCallback` is called when everything was done without error. `errorCallback` otherwise.
 
 For example base `ResponseListener` 
 
@@ -425,7 +425,7 @@ SynergyKit.onSocket(EVENT_TYPING,new SocketEventListener() {
 ```
 
 ## Queries
-You can retrieve multiple objects at once by sending a request with query. If query has no conditions API returns simply lists of all objects in collection.
+You can retrieve multiple objects at once by sending a request with query. If query has no conditions API returns simply list of all objects in collection.
 
 For more complex filtering and sorting SynergyKit accepts OData standard. These queries can be used with data, users and files.
 
@@ -877,9 +877,9 @@ Synergykit.loginUser(user,new UserResponseListener() {
 ## Communication
 In SynergyKit you can communicate with your users by different ways. There are listed some methods below this section.
 
-One way is to sending push notifications into user devices. This action need to have filled your API key for Android devices in Settings, section Android. For push notifications into iOS devices you need to fill your password and certificates into Apple section in Settings.
+One way is sending push notifications into user devices. This action need to have filled your API key for Android devices in Settings, section Android. For push notifications into iOS devices you need to fill your password and certificates into Apple section in Settings.
 
-Another way is to sending emails to your users. For this you need to create email templates in administration under Mailing section.
+Another way is sending emails to your users. For this you need to create email templates in administration under Mailing section.
 
 ### Send notification
 
@@ -1102,7 +1102,7 @@ Synergykit.sendBatch("batchId",new BatchResponseListener() {
 },true);
 ```
 ## Cache
-The SynergyKit Android SDK provides Http response cache (HttpResponseCache). Http response cache caches all of your application's HTTP requests. This cache requires Android 4.0  or later.
+The SynergyKit Android SDK provides Http response cache (HttpResponseCache). Http response cache caches all of your application's HTTP requests. This cache requires Android 4.0 or later.
 
 ### Install cache
 You can install this cache with default cache dir size (10 MiB):
