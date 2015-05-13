@@ -1,6 +1,6 @@
 # SynergyKit Android SDK
 <p align="left" style="margin-bottom:0;" >
-<img src="https://synergykit.blob.core.windows.net/synergykit/synergykitlogo.png" alt="Synergykit" title="Synergykit" width="33%">
+<img src="https://synergykit.blob.core.windows.net/synergykit/synergykitlogo.png" alt="Synergykit" title="Synergykit" width="224px">
 </p>
 
 Letsgood.com runs Backend as a Service SynergyKit for **fast and simple mobile/web/desktop applications development**. SynergyKit allows enterpreneurs implement an idea to project fast and at low cost like Lean Startup.
@@ -22,25 +22,17 @@ Almost all possibilities of SynergyKit are presented in Sample Application that 
 
 ### Sample App Installation 
 
-- Clone or download the repository.
-- Open `Android Studio`.
-- Open project `SynergyKit SDK Android`
-- Run Gradle task `installLocalSdkDebug` in module  `sample-app`
+ 1. Clone or download the repository.
+`git clone https://github.com/SynergyKit/synergykit-sdk-android`
+ 2. Open **Android Studio**.
+ 3. Open project `SynergyKit SDK Android` from downloaded repository.
+ 4. Run Gradle task `installLocalSdkDebug` in  `sample-app` module.
 
 ## Installation
 
 SynergyKit SDK Android is available through [Maven](https://bintray.com/letsgood/maven/synergykit-sdk-android/view) repository. **Minimum Android SDK version is 14**.
 
-To install it, simply add the following lines to your build.gradle files:
-
-```java
-repositories {
-    maven {
-        url  "http://dl.bintray.com/letsgood/maven" 
-    }
-}
-```
- 
+To install it, simply add the following line to your build.gradle files:
 
 ```java 
 compile 'com.letsgood:synergykit-sdk-android:2.1.4'
@@ -107,7 +99,7 @@ public class DemoUser extends SynergykitUser {
 ```
 
 ## SynergyKit Initialization
-Before you can start with SynergyKit SDK you need to set tenant and key. Is recommended to set it up in `onCreate` method  the your application class (class extended Application).
+Before you can start developing with SynergyKit SDK you need to set tenant and key. Is recommended to set it up in `onCreate` method of your application class (class extended Application).
 
 You can find it in **Settings > Application keys > Tenant** and **Settings > Application keys > Value** in SynergyKit web application.
 
@@ -118,7 +110,7 @@ Synergykit.init(APPLICATION_TENANT, APPLICATION_KEY);
 ## Responses handling
 There are many options that you can receive at the end of API communication. SDK provides many listeners to hadle responses.
 
-Every request has response listener  which provides `doneCallback` and  `errorCallback`. `doneCallback` is called when everything was done without error. `errorCallback` otherwise.
+Every request has response listener which provides `doneCallback` and `errorCallback`. `doneCallback` is called when everything was done without error. `errorCallback` otherwise.
 
 For example base `ResponseListener` 
 
@@ -425,7 +417,7 @@ SynergyKit.onSocket(EVENT_TYPING,new SocketEventListener() {
 ```
 
 ## Queries
-You can retrieve multiple objects at once by sending a request with query. If query has no conditions API returns simply lists of all objects in collection.
+You can retrieve multiple objects at once by sending a request with query. If query has no conditions API returns simply list of all objects in collection.
 
 For more complex filtering and sorting SynergyKit accepts OData standard. These queries can be used with data, users and files.
 
@@ -877,9 +869,9 @@ Synergykit.loginUser(user,new UserResponseListener() {
 ## Communication
 In SynergyKit you can communicate with your users by different ways. There are listed some methods below this section.
 
-One way is to sending push notifications into user devices. This action need to have filled your API key for Android devices in Settings, section Android. For push notifications into iOS devices you need to fill your password and certificates into Apple section in Settings.
+One way is sending push notifications into user devices. This action need to have filled your API key for Android devices in Settings, section Android. For push notifications into iOS devices you need to fill your password and certificates into Apple section in Settings.
 
-Another way is to sending emails to your users. For this you need to create email templates in administration under Mailing section.
+Another way is sending emails to your users. For this you need to create email templates in administration under Mailing section.
 
 ### Send notification
 
@@ -1102,7 +1094,7 @@ Synergykit.sendBatch("batchId",new BatchResponseListener() {
 },true);
 ```
 ## Cache
-The SynergyKit Android SDK provides Http response cache (HttpResponseCache). Http response cache caches all of your application's HTTP requests. This cache requires Android 4.0  or later.
+The SynergyKit Android SDK provides Http response cache (HttpResponseCache). Http response cache caches all of your application's HTTP requests. This cache requires Android 4.0 or later.
 
 ### Install cache
 You can install this cache with default cache dir size (10 MiB):
@@ -1142,9 +1134,9 @@ SynergyKit.flushCache();
 
 ## Author
 
-<img src="http://letsgood.com/src/img/logo-letsgood.png" alt="SynergyKIT" title="SynergyKIT" width="10%"> 
+<img src="http://letsgood.com/src/img/logo-letsgood.png" alt="SynergyKIT" title="SynergyKIT" width="120px">
 
-Letsgood.com s.r.o., Prague, Heart of Europe â€“ part of Etnetera Group.
+Letsgood.com s.r.o., Prague, Heart of Europe - part of Etnetera Group.
 
 development@letsgood.com, http://letsgood.com/en
 
