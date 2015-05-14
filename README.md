@@ -1,7 +1,7 @@
 <h1 id="synergykit-android-sdk">SynergyKit Android SDK</h1>
 
 <p align="left">
-<img src="https://synergykit.blob.core.windows.net/synergykit/synergykitlogo.png" alt="Synergykit" title="Synergykit" width="224px">
+<img src="https://synergykit.blob.core.windows.net/synergykit/synergykitlogo.png" alt="Synergykit" title="Synergykit" width="33%">
 </p>
 
 <p>Letsgood.com runs Backend as a Service SynergyKit for <strong>fast and simple mobile/web/desktop applications development</strong>. SynergyKit allows enterpreneurs implement an idea to project fast and at low cost like Lean Startup.</p>
@@ -89,6 +89,38 @@
 <li><a href="#login-user">Login user</a></li>
 </ul>
 </li>
+<li><a href="#communication">Communication</a><ul>
+<li><a href="#send-notification">Send notification</a></li>
+<li><a href="#send-e-mail">Send e-mail</a></li>
+</ul>
+</li>
+<li><a href="#files">Files</a><ul>
+<li><a href="#upload-file">Upload file</a></li>
+<li><a href="#retrieve-file-by-id">Retrieve file by ID</a></li>
+<li><a href="#delete-file">Delete file</a></li>
+</ul>
+</li>
+<li><a href="#cloud-code">Cloud Code</a><ul>
+<li><a href="#run-cloud-code">Run cloud code</a></li>
+</ul>
+</li>
+<li><a href="#batch-request">Batch request</a><ul>
+<li><a href="#batchitem">BatchItem</a></li>
+<li><a href="#adding-to-batch">Adding to batch</a></li>
+<li><a href="#sending-batch">Sending batch</a></li>
+</ul>
+</li>
+<li><a href="#cache">Cache</a><ul>
+<li><a href="#install-cache">Install cache</a></li>
+<li><a href="#flush-cache">Flush cache</a></li>
+</ul>
+</li>
+<li><a href="#changelog">Changelog</a><ul>
+<li><a href="#version-214-28-4-2015">Version 2.1.4 (28. 4. 2015)</a></li>
+</ul>
+</li>
+<li><a href="#author">Author</a></li>
+<li><a href="#license">License</a></li>
 </ul>
 </li>
 </ul>
@@ -105,13 +137,12 @@
 
 <h3 id="sample-app-installation">Sample App Installation</h3>
 
-<ol>
-<li>Clone or download the repository. <br>
-<code>git clone https://github.com/SynergyKit/synergykit-sdk-android</code></li>
-<li>Open <strong>Android Studio</strong>.</li>
-<li>Open project <code>SynergyKit SDK Android</code> from downloaded repository.</li>
-<li>Run Gradle task <code>installLocalSdkDebug</code> in  <code>sample-app</code> module.</li>
-</ol>
+<ul>
+<li>Clone or download the repository.</li>
+<li>Open <code>Android Studio</code>.</li>
+<li>Open project <code>SynergyKit SDK Android</code></li>
+<li>Run Gradle task <code>installLocalSdkDebug</code> in module  <code>sample-app</code></li>
+</ul>
 
 
 
@@ -119,7 +150,17 @@
 
 <p>SynergyKit SDK Android is available through <a href="https://bintray.com/letsgood/maven/synergykit-sdk-android/view">Maven</a> repository. <strong>Minimum Android SDK version is 14</strong>.</p>
 
-<p>To install it, simply add the following line to your build.gradle files:</p>
+<p>To install it, simply add the following lines to your build.gradle files:</p>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs ">repositories {
+    maven {
+        url  <span class="hljs-string">"http://dl.bintray.com/letsgood/maven"</span> 
+    }
+}</code></pre>
+
+
 
 <pre class="prettyprint"><code class="language-java hljs ">compile <span class="hljs-string">'com.letsgood:synergykit-sdk-android:2.1.4'</span></code></pre>
 
@@ -189,7 +230,7 @@
 
 <h2 id="synergykit-initialization">SynergyKit Initialization</h2>
 
-<p>Before you can start developing with SynergyKit SDK you need to set tenant and key. Is recommended to set it up in <code>onCreate</code> method of your application class (class extended Application).</p>
+<p>Before you can start with SynergyKit SDK you need to set tenant and key. Is recommended to set it up in <code>onCreate</code> method  the your application class (class extended Application).</p>
 
 <p>You can find it in <strong>Settings &gt; Application keys &gt; Tenant</strong> and <strong>Settings &gt; Application keys &gt; Value</strong> in SynergyKit web application.</p>
 
@@ -203,7 +244,7 @@
 
 <p>There are many options that you can receive at the end of API communication. SDK provides many listeners to hadle responses.</p>
 
-<p>Every request has response listener which provides <code>doneCallback</code> and <code>errorCallback</code>. <code>doneCallback</code> is called when everything was done without error. <code>errorCallback</code> otherwise.</p>
+<p>Every request has response listener  which provides <code>doneCallback</code> and  <code>errorCallback</code>. <code>doneCallback</code> is called when everything was done without error. <code>errorCallback</code> otherwise.</p>
 
 <p>For example base <code>ResponseListener</code> </p>
 
@@ -688,7 +729,7 @@ SynergyKit.onSocket(EVENT_TYPING,<span class="hljs-keyword">new</span> SocketEve
 
 <h2 id="queries">Queries</h2>
 
-<p>You can retrieve multiple objects at once by sending a request with query. If query has no conditions API returns simply list of all objects in collection.</p>
+<p>You can retrieve multiple objects at once by sending a request with query. If query has no conditions API returns simply lists of all objects in collection.</p>
 
 <p>For more complex filtering and sorting SynergyKit accepts OData standard. These queries can be used with data, users and files.</p>
 
@@ -986,7 +1027,11 @@ Synergykit.getFiles(config, <span class="hljs-keyword">new</span> FilesResponseL
 
 
 
-<pre class="prettyprint"><code class="language-java hljs ">Synergykit.createUser(<span class="hljs-keyword">new</span> SynergykitUser(),<span class="hljs-keyword">new</span> UserResponseListener() {
+<pre class="prettyprint"><code class="language-java hljs ">SynergykitUser user = <span class="hljs-keyword">new</span> SynergykitUser();
+user.setEmail(<span class="hljs-string">"user@domain.com"</span>);
+user.setPassword(<span class="hljs-string">"password"</span>);
+
+Synergykit.createUser(user,<span class="hljs-keyword">new</span> UserResponseListener() {
     <span class="hljs-annotation">@Override</span>
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doneCallback</span>(<span class="hljs-keyword">int</span> statusCode, SynergykitUser user) {
         <span class="hljs-comment">//your code</span>
@@ -997,8 +1042,6 @@ Synergykit.getFiles(config, <span class="hljs-keyword">new</span> FilesResponseL
         <span class="hljs-comment">//your code</span>
     }
 },<span class="hljs-keyword">false</span>);</code></pre>
-
-
 
 <h3 id="retrieve-an-existing-user-by-id">Retrieve an existing user by ID</h3>
 
@@ -1520,9 +1563,9 @@ Synergykit.getFiles(config, <span class="hljs-keyword">new</span> FilesResponseL
 
 <p>In SynergyKit you can communicate with your users by different ways. There are listed some methods below this section.</p>
 
-<p>One way is sending push notifications into user devices. This action need to have filled your API key for Android devices in Settings, section Android. For push notifications into iOS devices you need to fill your password and certificates into Apple section in Settings.</p>
+<p>One way is to sending push notifications into user devices. This action need to have filled your API key for Android devices in Settings, section Android. For push notifications into iOS devices you need to fill your password and certificates into Apple section in Settings.</p>
 
-<p>Another way is sending emails to your users. For this you need to create email templates in administration under Mailing section.</p>
+<p>Another way is to sending emails to your users. For this you need to create email templates in administration under Mailing section.</p>
 
 
 
@@ -1972,7 +2015,7 @@ Synergykit.getBatch(<span class="hljs-string">"batchId"</span>).add(batchItem-n)
 
 <h2 id="cache">Cache</h2>
 
-<p>The SynergyKit Android SDK provides Http response cache (HttpResponseCache). Http response cache caches all of your application’s HTTP requests. This cache requires Android 4.0 or later.</p>
+<p>The SynergyKit Android SDK provides Http response cache (HttpResponseCache). Http response cache caches all of your application’s HTTP requests. This cache requires Android 4.0  or later.</p>
 
 
 
@@ -2005,6 +2048,8 @@ SynergyKit.installCache(getApplicationContext(), cacheSize);</code></pre>
 
 <h2 id="changelog">Changelog</h2>
 
+
+
 <h3 id="version-214-28-4-2015">Version 2.1.4 (28. 4. 2015)</h3>
 
 <ul>
@@ -2025,9 +2070,9 @@ SynergyKit.installCache(getApplicationContext(), cacheSize);</code></pre>
 
 <h2 id="author">Author</h2>
 
-<p><img src="http://letsgood.com/src/img/logo-letsgood.png" alt="SynergyKIT" title="SynergyKIT" width="120px"></p>
+<p><img src="http://letsgood.com/src/img/logo-letsgood.png" alt="SynergyKIT" title="SynergyKIT" width="10%"> </p>
 
-<p>Letsgood.com s.r.o., Prague, Heart of Europe - part of Etnetera Group.</p>
+<p>Letsgood.com s.r.o., Prague, Heart of Europe â€“ part of Etnetera Group.</p>
 
 <p>development@letsgood.com, <a href="http://letsgood.com/en">http://letsgood.com/en</a></p>
 
