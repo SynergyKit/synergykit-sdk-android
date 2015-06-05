@@ -83,14 +83,21 @@ public class UriBuilder {
     }
 	
 	/* Filter setter */
-	public UriBuilder setFilter(String attribute, String operator, String parametr){
-		oDataBuilder.setFilter(attribute, operator, parametr);;
+	public UriBuilder setFilter(String attribute, String operator, String parameter){
+		oDataBuilder.setFilter(attribute, operator, parameter);;
 		return this;
 	}
 	
 	/* Filter setter */
-	public UriBuilder setFilter(String attribute, String operator, int parametr){
-        oDataBuilder.setFilter(attribute, operator, parametr);
+	public UriBuilder setFilter(String attribute, String operator, int parameter){
+        oDataBuilder.setFilter(attribute, operator, parameter);
+		return this;
+	}
+
+
+	/* Filter setter */
+	public UriBuilder setFilter(String attribute, String operator, String[] parameter){
+		oDataBuilder.setFilter(attribute, operator, parameter);
 		return this;
 	}
 	

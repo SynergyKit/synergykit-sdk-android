@@ -154,17 +154,7 @@
 
 
 
-<pre class="prettyprint"><code class="language-java hljs ">repositories {
-    maven {
-        url  <span class="hljs-string">"http://dl.bintray.com/letsgood/maven"</span> 
-    }
-}</code></pre>
-
-
-
-<pre class="prettyprint"><code class="language-java hljs ">compile <span class="hljs-string">'com.letsgood:synergykit-sdk-android:2.1.4'</span></code></pre>
-
-
+<pre class="prettyprint"><code class="language-java hljs ">compile <span class="hljs-string">'com.letsgood:synergykit-sdk-android:2.1.7'</span></code></pre>
 
 <h2 id="architecture">Architecture</h2>
 
@@ -2049,6 +2039,13 @@ SynergyKit.installCache(getApplicationContext(), cacheSize);</code></pre>
 <h2 id="changelog">Changelog</h2>
 
 
+
+<h3 id="version-217-5-6-2015">Version 2.1.7 (5. 6. 2015)</h3>
+
+<ul>
+<li>Google link fixed</li>
+<li>Filter improved</li>
+</ul>
 
 <h3 id="version-214-28-4-2015">Version 2.1.4 (28. 4. 2015)</h3>
 

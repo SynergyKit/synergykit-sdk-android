@@ -69,7 +69,21 @@ public class Filter {
         return this;
 
 	}
-	
+
+	/* Filter setter */
+	public Filter setFilter(String attribute, String operator, String[] parameter){
+
+		if(attribute == null || attribute.length()==0 || operator==null || operator.length()==0){
+			SynergykitLog.print(Errors.MSG_NULL_ARGUMENTS_OR_EMPTY);
+			return this;
+		}
+
+
+		filter=Filter.buildAttribute(attribute)+operator+Filter.buildArrayParameter(parameter);
+		return this;
+
+	}
+
 	/* Filter setter */
 	public Filter setFilter(String attribute, String operator, int parameter){
 		

@@ -32,10 +32,12 @@ package com.letsgood.synergykitsdkandroid.resources;
 
 import com.google.gson.annotations.Expose;
 
+import java.io.Serializable;
+
 /**
  * Created by Letsgood.com - Pavel Stambrecht on 13. 4. 2015.
  */
-public class SynergykitFacebookAuthData {
+public class SynergykitFacebookAuthData implements Serializable {
 
     /* Attribute */
     @Expose

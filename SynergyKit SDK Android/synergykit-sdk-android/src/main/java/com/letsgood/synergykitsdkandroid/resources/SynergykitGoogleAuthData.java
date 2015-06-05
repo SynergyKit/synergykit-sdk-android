@@ -30,12 +30,17 @@
 
 package com.letsgood.synergykitsdkandroid.resources;
 
+import com.google.gson.annotations.Expose;
+
+import java.io.Serializable;
+
 /**
  * Created by Letsgood.com - Pavel Stambrecht on 13. 4. 2015.
  */
-public class SynergykitGoogleAuthData {
+public class SynergykitGoogleAuthData implements Serializable {
 
     /* Attributes */
+    @Expose
     private String id;
 
     /* Id getter */

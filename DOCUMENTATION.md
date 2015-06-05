@@ -33,17 +33,8 @@ SynergyKit SDK Android is available through [Maven](https://bintray.com/letsgood
 
 To install it, simply add the following lines to your build.gradle files:
 
-```java
-repositories {
-    maven {
-        url  "http://dl.bintray.com/letsgood/maven" 
-    }
-}
-```
- 
-
 ```java 
-compile 'com.letsgood:synergykit-sdk-android:2.1.4'
+compile 'com.letsgood:synergykit-sdk-android:2.1.7'
 ```
 
 
@@ -1128,6 +1119,9 @@ SynergyKit.flushCache();
 
 
 ## Changelog
+### Version 2.1.7 (5. 6. 2015)
+- Google link fixed
+- Filter improved
 ### Version 2.1.4 (28. 4. 2015)
 
 - **SynergyKit v2.1 support**

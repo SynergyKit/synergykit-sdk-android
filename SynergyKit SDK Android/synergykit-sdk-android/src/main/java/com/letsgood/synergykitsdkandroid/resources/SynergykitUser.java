@@ -119,7 +119,7 @@ public class SynergykitUser extends SynergykitObject implements Serializable {
     }
 
     /* -------------------------------------------------------------- */
-    public class AuthData {
+    public class AuthData implements Serializable{
 
         /* Attributes */
         @Expose

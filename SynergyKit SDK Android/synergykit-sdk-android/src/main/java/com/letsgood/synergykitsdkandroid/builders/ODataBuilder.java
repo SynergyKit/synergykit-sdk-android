@@ -57,14 +57,20 @@ public class ODataBuilder {
     }
 
     /* Filter setter */
-    public ODataBuilder setFilter(String attribute, String operator, String parametr){
-        this.filter.setFilter(attribute, operator, parametr);;
+    public ODataBuilder setFilter(String attribute, String operator, String parameter){
+        this.filter.setFilter(attribute, operator, parameter);;
         return this;
     }
 
     /* Filter setter */
-    public ODataBuilder setFilter(String attribute, String operator, int parametr){
-        this.filter.setFilter(attribute, operator, parametr);
+    public ODataBuilder setFilter(String attribute, String operator, int parameter){
+        this.filter.setFilter(attribute, operator, parameter);
+        return this;
+    }
+
+    /* Filter setter */
+    public ODataBuilder setFilter(String attribute, String operator, String[] parameter){
+        this.filter.setFilter(attribute, operator, parameter);
         return this;
     }
 

@@ -32,10 +32,12 @@ package com.letsgood.synergykitsdkandroid.resources;
 
 import com.google.gson.annotations.Expose;
 
+import java.io.Serializable;
+
 /**
  * Created by Letsgood.com - Pavel Stambrecht on 23. 2. 2015.
  */
-public class SynergykitBatchItem {
+public class SynergykitBatchItem implements Serializable {
 
     /* Attributes */
     @Expose

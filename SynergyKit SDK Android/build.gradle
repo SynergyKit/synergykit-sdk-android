@@ -7,7 +7,11 @@ buildscript {
         maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
+<<<<<<< HEAD
         classpath 'com.android.tools.build:gradle:1.2.2'
+=======
+        classpath 'com.android.tools.build:gradle:1.2.3'
+>>>>>>> devel
         classpath 'com.github.dcendents:android-maven-plugin:1.2'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
         classpath 'io.fabric.tools:gradle:1.+'

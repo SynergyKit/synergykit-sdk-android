@@ -30,10 +30,12 @@
 
 package com.letsgood.synergykitsdkandroid.resources;
 
+import java.io.Serializable;
+
 /**
  * Created by Letsgood.com - Pavel Stambrecht on 21. 4. 2015.
  */
-public class SynergykitCloudCode extends  SynergykitObject {
+public class SynergykitCloudCode extends  SynergykitObject implements Serializable {
 
     /* Attributes */
     protected String cloudCodeName;
