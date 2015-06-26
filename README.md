@@ -116,6 +116,7 @@
 </ul>
 </li>
 <li><a href="#changelog">Changelog</a><ul>
+<li><a href="#version-217-5-6-2015">Version 2.1.7 (5. 6. 2015)</a></li>
 <li><a href="#version-214-28-4-2015">Version 2.1.4 (28. 4. 2015)</a></li>
 </ul>
 </li>
@@ -156,17 +157,17 @@
 
 <pre class="prettyprint"><code class="language-java hljs ">compile <span class="hljs-string">'com.letsgood:synergykit-sdk-android:2.1.7'</span></code></pre>
 
+
+
 <h2 id="architecture">Architecture</h2>
 
 
 
 <h3 id="building-model">Building model</h3>
 
-<p>SynergyKit has two base objects <code>SynergykitObject</code> and <code>SynergykitUser</code>.  Every object which you want to store in SynergyKit must extends <code>SynergykitObject</code>. Every user you want to sign in, sign out or store in SynergyKit must extends <code>SynergykitUser</code>.   </p>
+<p>SynergyKit has two base objects <code>SynergykitObject</code> and <code>SynergykitUser</code>.  Every object you want to store in SynergyKit must extend <code>SynergykitObject</code>. Every user you want to sign in, sign out or store in SynergyKit must extend <code>SynergykitUser</code>.   </p>
 
 <p>SDK uses <a href="https://code.google.com/p/google-gson/">Google Gson</a> to serialize object to JSON and deserialize object from JSON.  Every argument of your objects which would be serialize/deserialize must have <code>@Expose</code> annotation. </p>
-
-
 
 <pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DemoObject</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">SynergykitObject</span> {</span>
 
@@ -727,11 +728,9 @@ SynergyKit.onSocket(EVENT_TYPING,<span class="hljs-keyword">new</span> SocketEve
 
 <h3 id="available-conditions">Available conditions</h3>
 
-<p>Query string is builded according to <a href="http://odata.org">OData Protocol</a> and is appended to the end of the url.</p>
+<p>Query string is built according to <a href="http://odata.org">OData Protocol</a> and is appended to the end of the url.</p>
 
 <p>The OData Protocol specification defines how to standardize a typed, resource-oriented CRUD interface for manipulating data sources by providing collections of entries which must have required elements.</p>
-
-
 
 <h4 id="filter">filter</h4>
 
@@ -1033,6 +1032,8 @@ Synergykit.createUser(user,<span class="hljs-keyword">new</span> UserResponseLis
     }
 },<span class="hljs-keyword">false</span>);</code></pre>
 
+
+
 <h3 id="retrieve-an-existing-user-by-id">Retrieve an existing user by ID</h3>
 
 <table>
@@ -1259,7 +1260,7 @@ Synergykit.createUser(user,<span class="hljs-keyword">new</span> UserResponseLis
 <tr>
   <td align="left">role</td>
   <td align="left">String</td>
-  <td align="left">Role define in SynergyKit</td>
+  <td align="left">Role defined in SynergyKit</td>
   <td align="center"><strong>required</strong></td>
 </tr>
 <tr>
@@ -1275,8 +1276,6 @@ Synergykit.createUser(user,<span class="hljs-keyword">new</span> UserResponseLis
   <td align="center"><strong>required</strong></td>
 </tr>
 </tbody></table>
-
-
 
 
 <pre class="prettyprint"><code class="language-java hljs ">Synergykit.removeRole(user,<span class="hljs-string">"role"</span>,<span class="hljs-keyword">new</span> UserResponseListener() {
@@ -1295,9 +1294,9 @@ Synergykit.createUser(user,<span class="hljs-keyword">new</span> UserResponseLis
 
 <h3 id="add-platform-to-user">Add platform to user</h3>
 
-<p>Platforms are useful for pairing individual mobile devices or web applications to the user via registration ID. After assignment platform to the user you will be able to send push notifications to the device or application.</p>
+<p>Platforms are useful for pairing individual mobile devices or web applications with a user via registration ID. Once a platform is assigned to a user, you are able to send push notifications to the device or application.</p>
 
-<p><strong>Before you can work with platforms</strong> of user is needed to login first. After successful login SDK receives sessionToken for authentication of user. Token is held by the SDK and is automatically inserted into the Headers.</p>
+<p><strong>You can work with user’s platforms after a user has logged in</strong>. After successful login SDK receives sessionToken for authentication of user. Token is held by the SDK and is automatically inserted into the Headers.</p>
 
 <table>
 <thead>
@@ -1327,8 +1326,6 @@ Synergykit.createUser(user,<span class="hljs-keyword">new</span> UserResponseLis
   <td align="center"><strong>required</strong></td>
 </tr>
 </tbody></table>
-
-
 
 
 <pre class="prettyprint"><code class="language-java hljs ">Synergykit.addPlatform(platform,<span class="hljs-keyword">new</span> PlatformResponseListener() {
@@ -1395,7 +1392,7 @@ Synergykit.createUser(user,<span class="hljs-keyword">new</span> UserResponseLis
 
 <h3 id="update-platform">Update platform</h3>
 
-<p>Platforms contain of a few parameters but only two are updatable. Save method executes <code>PUT</code> request if <code>_id</code> is set, it could change <code>development</code> and <code>registrationId</code>. </p>
+<p>Platforms consist of a few parameters but only two are updatable. Save method executes <code>PUT</code> request if <code>_id</code> is set, it could change <code>development</code> and <code>registrationId</code>. </p>
 
 <table>
 <thead>
@@ -1425,8 +1422,6 @@ Synergykit.createUser(user,<span class="hljs-keyword">new</span> UserResponseLis
   <td align="center"><strong>required</strong></td>
 </tr>
 </tbody></table>
-
-
 
 
 <pre class="prettyprint"><code class="language-java hljs ">Synergykit.updatePlatform(platform,<span class="hljs-keyword">new</span> PlatformResponseListener() {
@@ -1493,13 +1488,11 @@ Synergykit.createUser(user,<span class="hljs-keyword">new</span> UserResponseLis
 
 <h3 id="activating-user">Activating user</h3>
 
-<p>By default, user is not activated. This mean, that you can use this state to validate user e-mail address by sending him activation link.</p>
+<p>By default, user is not activated. This means that you can use this state to validate user’s e-mail address by sending him activation link.</p>
 
 <p>To activate user, send an email with this activation link /v2.1/users/activation/[ACTIVATION_HASH]. You can provide parameter callback with url address where you want to redirect user after activation.</p>
 
 <p>Or <strong>if you know that e-mai address is valid</strong> you can activate user with SDK.</p>
-
-
 
 <pre class="prettyprint"><code class="language-java hljs ">user.setActivated(<span class="hljs-keyword">true</span>);</code></pre>
 
@@ -1551,13 +1544,11 @@ Synergykit.createUser(user,<span class="hljs-keyword">new</span> UserResponseLis
 
 <h2 id="communication">Communication</h2>
 
-<p>In SynergyKit you can communicate with your users by different ways. There are listed some methods below this section.</p>
+<p>In SynergyKit you can communicate with your users in different ways. Some methods are listed below.</p>
 
-<p>One way is to sending push notifications into user devices. This action need to have filled your API key for Android devices in Settings, section Android. For push notifications into iOS devices you need to fill your password and certificates into Apple section in Settings.</p>
+<p>One way is sending push notifications to user’s devices. For this action you need to have filled your API key for Android devices in Settings, section Android. For push notifications to iOS devices you need to fill your password and certificates into Apple section in Settings.</p>
 
-<p>Another way is to sending emails to your users. For this you need to create email templates in administration under Mailing section.</p>
-
-
+<p>Another way is sending emails to your users. To be able to do this you need to create email templates in administration under Mailing section.</p>
 
 <h3 id="send-notification">Send notification</h3>
 
@@ -1685,9 +1676,7 @@ Synergykit.sendNotification(notification,<span class="hljs-keyword">new</span> N
 
 <h2 id="files">Files</h2>
 
-<p>SynergyKit can be also used for storing as much quantity of files as you need for your application.</p>
-
-
+<p>SynergyKit can also be used for storing as many files as you need for your application.</p>
 
 <h3 id="upload-file">Upload file</h3>
 
@@ -1877,9 +1866,7 @@ Synergykit.createFile(bitmap,<span class="hljs-keyword">new</span> FileResponseL
      }
  },<span class="hljs-keyword">true</span>);</code></pre>
 
-<p>Example cloud code function should looks like this.</p>
-
-
+<p>Example cloud code function should look like this.</p>
 
 <pre class="prettyprint"><code class=" hljs erlang"><span class="hljs-function"><span class="hljs-title">callback</span><span class="hljs-params">(<span class="hljs-string">"Hello "</span> + parameters.name + <span class="hljs-string">"!"</span>)</span></span></code></pre>
 
@@ -1938,9 +1925,7 @@ SynergykitBatchItem batchItem = <span class="hljs-keyword">new</span> Synergykit
 
 <h3 id="adding-to-batch">Adding to batch</h3>
 
-<p>Every batch item need to be add to batch which you can send. At firt you must initialize batch. Then you can add BatchItems and send them all together.</p>
-
-
+<p>Every batch item need to be added to batch which you can send. At first you must initialize batch. Then you can add BatchItems and send them all together.</p>
 
 <pre class="prettyprint"><code class="language-java hljs ">Synergykit.initBatch(<span class="hljs-string">"batchId"</span>);
 
@@ -2047,6 +2032,8 @@ SynergyKit.installCache(getApplicationContext(), cacheSize);</code></pre>
 <li>Filter improved</li>
 </ul>
 
+
+
 <h3 id="version-214-28-4-2015">Version 2.1.4 (28. 4. 2015)</h3>
 
 <ul>
@@ -2062,18 +2049,6 @@ SynergyKit.installCache(getApplicationContext(), cacheSize);</code></pre>
 <li>CloudCode</li>
 <li>Batching requests</li>
 </ul>
-
-
-
-<h2 id="author">Author</h2>
-
-<p><img src="http://letsgood.com/src/img/logo-letsgood.png" alt="SynergyKIT" title="SynergyKIT" width="10%"> </p>
-
-<p>Letsgood.com s.r.o., Prague, Heart of Europe â€“ part of Etnetera Group.</p>
-
-<p>development@letsgood.com, <a href="http://letsgood.com/en">http://letsgood.com/en</a></p>
-
-
 
 <h2 id="license">License</h2>
 
